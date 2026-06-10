@@ -1,0 +1,381 @@
+const abstractfactory: React.ReactNode = (
+  <svg
+    viewBox="0 0 680 320"
+    className="w-full"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <marker
+        id="arr-af"
+        viewBox="0 0 10 10"
+        refX="8"
+        refY="5"
+        markerWidth="6"
+        markerHeight="6"
+        orient="auto"
+      >
+        <path
+          d="M2 1L8 5L2 9"
+          fill="none"
+          stroke="#9ca3af"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </marker>
+    </defs>
+    {/* MealFactory */}
+    <rect
+      x="240"
+      y="20"
+      width="200"
+      height="70"
+      rx="8"
+      fill="#f0fdf4"
+      stroke="#6ee7b7"
+      strokeWidth="1"
+    />
+    <text x="340" y="44" textAnchor="middle" fill="#065f46" fontSize="11">
+      «interface»
+    </text>
+    <text
+      x="340"
+      y="62"
+      textAnchor="middle"
+      fill="#065f46"
+      fontSize="13"
+      fontWeight="500"
+    >
+      MealFactory
+    </text>
+    <text x="340" y="80" textAnchor="middle" fill="#0f6e56" fontSize="10">
+      + createBurger() + createGarlicBread()
+    </text>
+    {/* Burger interface */}
+    <rect
+      x="20"
+      y="20"
+      width="160"
+      height="64"
+      rx="8"
+      fill="#ede9fe"
+      stroke="#c4b5fd"
+      strokeWidth="1"
+    />
+    <text x="100" y="44" textAnchor="middle" fill="#5b21b6" fontSize="11">
+      «interface»
+    </text>
+    <text
+      x="100"
+      y="62"
+      textAnchor="middle"
+      fill="#5b21b6"
+      fontSize="13"
+      fontWeight="500"
+    >
+      Burger
+    </text>
+    <text x="100" y="78" textAnchor="middle" fill="#7c3aed" fontSize="11">
+      + prepare()
+    </text>
+    {/* GarlicBread interface */}
+    <rect
+      x="500"
+      y="20"
+      width="160"
+      height="64"
+      rx="8"
+      fill="#ede9fe"
+      stroke="#c4b5fd"
+      strokeWidth="1"
+    />
+    <text x="580" y="44" textAnchor="middle" fill="#5b21b6" fontSize="11">
+      «interface»
+    </text>
+    <text
+      x="580"
+      y="62"
+      textAnchor="middle"
+      fill="#5b21b6"
+      fontSize="13"
+      fontWeight="500"
+    >
+      GarlicBread
+    </text>
+    <text x="580" y="78" textAnchor="middle" fill="#7c3aed" fontSize="11">
+      + prepare()
+    </text>
+    {/* has-a arrows */}
+    <line
+      x1="240"
+      y1="52"
+      x2="182"
+      y2="52"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      markerEnd="url(#arr-af)"
+    />
+    <text x="211" y="44" textAnchor="middle" fill="#9ca3af" fontSize="9">
+      has-a
+    </text>
+    <line
+      x1="440"
+      y1="52"
+      x2="498"
+      y2="52"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      markerEnd="url(#arr-af)"
+    />
+    <text x="469" y="44" textAnchor="middle" fill="#9ca3af" fontSize="9">
+      has-a
+    </text>
+    {/* Factory concretes */}
+    <line
+      x1="340"
+      y1="90"
+      x2="340"
+      y2="130"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line
+      x1="270"
+      y1="130"
+      x2="420"
+      y2="130"
+      stroke="#9ca3af"
+      strokeWidth="1"
+    />
+    <line
+      x1="270"
+      y1="130"
+      x2="270"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line
+      x1="420"
+      y1="130"
+      x2="420"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <rect
+      x="190"
+      y="150"
+      width="160"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="270"
+      y="172"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="11"
+      fontWeight="500"
+    >
+      ASinghBurger
+    </text>
+    <rect
+      x="340"
+      y="150"
+      width="160"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="420"
+      y="172"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="11"
+      fontWeight="500"
+    >
+      AKingBurger
+    </text>
+    {/* Burger concretes */}
+    <line
+      x1="100"
+      y1="84"
+      x2="100"
+      y2="130"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line x1="40" y1="130" x2="180" y2="130" stroke="#9ca3af" strokeWidth="1" />
+    <line
+      x1="40"
+      y1="130"
+      x2="40"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line
+      x1="180"
+      y1="130"
+      x2="180"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <rect
+      x="0"
+      y="150"
+      width="120"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="60"
+      y="172"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      BasicBurger
+    </text>
+    <rect
+      x="122"
+      y="150"
+      width="120"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="182"
+      y="172"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      BasicWheatBurger
+    </text>
+    {/* GarlicBread concretes */}
+    <line
+      x1="580"
+      y1="84"
+      x2="580"
+      y2="130"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line
+      x1="510"
+      y1="130"
+      x2="650"
+      y2="130"
+      stroke="#9ca3af"
+      strokeWidth="1"
+    />
+    <line
+      x1="510"
+      y1="130"
+      x2="510"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <line
+      x1="650"
+      y1="130"
+      x2="650"
+      y2="150"
+      stroke="#9ca3af"
+      strokeWidth="1"
+      strokeDasharray="4 3"
+    />
+    <rect
+      x="460"
+      y="150"
+      width="100"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="510"
+      y="168"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      Basic
+    </text>
+    <text
+      x="510"
+      y="180"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      GarlicBread
+    </text>
+    <rect
+      x="565"
+      y="150"
+      width="110"
+      height="36"
+      rx="6"
+      fill="#f9fafb"
+      stroke="#d1d5db"
+      strokeWidth="1"
+    />
+    <text
+      x="620"
+      y="168"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      Cheese
+    </text>
+    <text
+      x="620"
+      y="180"
+      textAnchor="middle"
+      fill="#374151"
+      fontSize="10"
+      fontWeight="500"
+    >
+      GarlicBread
+    </text>
+    <text x="340" y="290" textAnchor="middle" fill="#9ca3af" fontSize="11">
+      Provides an interface for families of related objects without specifying
+      concrete classes.
+    </text>
+  </svg>
+);
+
+export default abstractfactory;
